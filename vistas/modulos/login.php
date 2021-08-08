@@ -1,10 +1,12 @@
+<div id="loginCristal"></div>
 <div id="back"></div>
 <div class="login-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
       <img src="vistas/img/plantilla/logo.png" class="img-responsive" >
     </div>
-    <div class="card-body">
+
+    <div class="card-body  loginSC" id="">
       <p class="login-box-msg">Ingresar al sistema</p>
 
       <form  method="post">
@@ -28,8 +30,8 @@
         <div class="row">
 
 
-          <div class="col-xs-12">
-            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+          <div class="col-lg-12">
+            <button type="submit" class="btn btn-primary btn-block rounded-pill">Ingresar</button>
           </div>
 
         </div>

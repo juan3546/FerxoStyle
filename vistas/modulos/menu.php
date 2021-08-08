@@ -34,19 +34,35 @@
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="clientes" class="nav-link">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
                     Clientes
                 </p>
                 </a>
             </li>
-
-            <li class="nav-item">
+            <li class="nav-item" >
                 <a href="categorias" class="nav-link">
                 <i class="nav-icon fas fa-tshirt"></i>
                 <p>
                   Categorías
+                </p>
+                </a>
+            </li>
+
+            <li class="nav-item" >
+                <a href="inventario" class="nav-link">
+                <i class="nav-icon fas fa-boxes"></i>
+                <p>
+                  Inventario
+                </p>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="cotizaciones" class="nav-link">
+                <i class="nav-icon fas fa-calculator"></i>
+                <p>
+                  Cotizaciones
                 </p>
                 </a>
             </li>
@@ -70,6 +86,31 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-user"></i>
                   <p>Usuarios</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                  Configuración web
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="configInicio" class="nav-link">
+                <i class="nav-icon fas fa-store"></i>
+                  <p>Inicio</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="configRedes" class="nav-link">
+                  <i class="nav-icon fas fa-user"></i>
+                  <p>Redes sociales</p>
                 </a>
               </li>
              

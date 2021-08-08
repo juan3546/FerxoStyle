@@ -38,6 +38,7 @@ session_start();
    <script src="vistas/plugins/datatables/DataTables-1.10.23/js/dataTables.bootstrap4.js"></script>
 
    <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
+   <script src="vistas/plugins/bootstrap-switch/js/bootstrap-switch.js"></script>
 </head>
 
 <!-- Site wrapper -->
@@ -57,6 +58,11 @@ session_start();
                 if($_GET["ruta"]=="usuarios" || 
                 $_GET["ruta"]=="inicio" ||
                 $_GET["ruta"]=="categorias" ||
+                $_GET["ruta"]=="clientes" ||
+                $_GET["ruta"]=="inventario" ||
+                $_GET["ruta"]=="cotizaciones" ||
+                $_GET["ruta"]=="configRedes" ||
+                $_GET["ruta"]=="configInicio" ||
                 $_GET["ruta"]=="salir"){
                     include "modulos/".$_GET["ruta"].".php";
                 }else{
@@ -69,14 +75,18 @@ session_start();
             // pie de pagina
             include "modulos/footer.php";
             echo '</div>';
-
+            
             echo '<script src="vistas/js/plantilla.js"></script>';
             echo '<script src="vistas/js/usuarios.js"></script>';
             echo '<script src="vistas/js/categorias.js"></script>';
+            echo '<script src="vistas/js/clientes.js"></script>';
+            echo '<script src="vistas/js/inventario.js"></script>';
+            echo '<script src="vistas/js/configuracion.js"></script>';
             
             echo '</body>';
         }else{
             echo '<body class="hold-transition  layout-fixed  login-page">';
+           
             // login
             include "modulos/login.php";
             echo '</body>';

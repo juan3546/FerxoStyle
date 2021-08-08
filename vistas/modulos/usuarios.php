@@ -9,7 +9,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
               <li class="breadcrumb-item active">Usuarios</li>
             </ol>
           </div>
@@ -145,7 +145,7 @@ foreach ($usuarios as $key => $value){
                       <span class="fas fa-key"></span>
                     </div>
                   </div>
-                  <input type="text" class="form-control" name="nuevoUsuario" placeholder="Usuario" require>
+                  <input type="text" class="form-control" name="nuevoUsuario" id="nuevoUsuario" placeholder="Usuario" require>
                 </div>
               </div>
             <!-- Entrada de Contraseña -->
@@ -180,9 +180,9 @@ foreach ($usuarios as $key => $value){
               <!-- subir foto -->
               <div class="form-group">
                 <div class="panel">Subir Foto</div>
-                <input type="file" name="nuevaFoto" id="nuevaFoto">
+                <input type="file" name="nuevaFoto" id="nuevaFoto" class="foto">
                 <p class="help-block">Peso máximo de la foto 200 MB</p>
-                <img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail" width="100px">
+                <img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail previsualizar" width="100px">
               </div>
             </div>
 
@@ -271,9 +271,9 @@ foreach ($usuarios as $key => $value){
             <!-- subir foto -->
               <div class="form-group">
                 <div class="panel">Subir Foto</div>
-                <input type="file" name="editarFoto" id="editarFoto">
+                <input type="file" name="editarFoto" id="editarFoto" class="foto">
                 <p class="help-block">Peso máximo de la foto 200 MB</p>
-                <img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail" width="100px">
+                <img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail previsualizar" width="100px">
                 <input type="hidden" name="fotoActual" id="fotoActual">
               </div>
               

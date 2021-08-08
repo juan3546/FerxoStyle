@@ -2,7 +2,7 @@
 SUBIENDO LA FOTO DEL USUARIO
 =============================================*/
 
-$("#nuevaFoto").change(function(){
+$(".foto").change(function(){
 	var imagen = this.files[0];
 	
 	/*=============================================
@@ -11,7 +11,7 @@ $("#nuevaFoto").change(function(){
 
   	if(imagen["type"] != "image/jpeg" && imagen["type"] != "image/png"){
 
-  		$("#nuevaFoto").val("");
+  		$(".foto").val("");
 
   		 Swal.fire({
 		      title: "Error al subir la imagen",
@@ -22,7 +22,7 @@ $("#nuevaFoto").change(function(){
 
   	}else if(imagen["size"] > 2000000){
 
-  		$("#nuevaFoto").val("");
+  		$(".foto").val("");
 
   		 Swal.fire({
 		      title: "Error al subir la imagen",
@@ -40,7 +40,7 @@ $("#nuevaFoto").change(function(){
 
   			var rutaImagen = event.target.result;
 
-  			$("#previsualizar").attr("src", rutaImagen);
+  			$(".previsualizar").attr("src", rutaImagen);
 
   		});
 
@@ -155,6 +155,37 @@ $(document).on("click", ".btnActivar", function(){
 REVISAR SI EL USUARIO YA ESTÁ REGISTRADO
 =============================================*/
 
+$(document).on("change", "#nuevoUsuario", function(){
+	$(".alert").remove();
+	
+	var usuario = $(this).val();
+
+	var datos = new FormData();
+	datos.append("validarUsuario", usuario);
+
+	 $.ajax({
+	    url:"ajax/usuarios.ajax.php",
+	    method:"POST",
+	    data: datos,
+	    cache: false,
+	    contentType: false,
+	    processData: false,
+	    dataType: "json",
+	    success:function(respuesta){
+	    	
+	    	if(respuesta){
+
+	    		$("#nuevoUsuario").parent().after('<div class="alert alert-warning">Este usuario ya existe en la base de datos</div>');
+
+	    		$("#nuevoUsuario").val("");
+
+	    	}
+
+	    }
+
+	});
+});
+/*
 $("#nuevoUsuario").change(function(){
 
 	$(".alert").remove();
@@ -186,6 +217,7 @@ $("#nuevoUsuario").change(function(){
 
 	});
 });
+*/
 
 /*=============================================
 ELIMINAR USUARIO
