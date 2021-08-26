@@ -1,9 +1,9 @@
  <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+ <aside class="main-sidebar elevation-4 sidebar-dark-primary">
     <!-- Brand Logo -->
     <a href="inicio" class="brand-link">
-      <img src="vistas/img/plantilla/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">INNOVASOFT</span>
+      <img src="vistas/img/plantilla/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3 ml-auto"  style="opacity: .8">
+      <span class="brand-text font-weight-light">FERXO STYLE</span>
     </a>
 
     <!-- Sidebar -->
@@ -12,9 +12,9 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column text-sm nav-legacy nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="inicio" class="nav-link active">
+                <a href="inicio" class="nav-link">
                 <i class="nav-icon fas fa-home"></i>
                 <p>
                     Inicio
@@ -58,7 +58,7 @@
                 </p>
                 </a>
             </li>
-            <li class="nav-item" >
+            <li class="nav-item" hidden>
                 <a href="cotizaciones" class="nav-link">
                 <i class="nav-icon fas fa-calculator"></i>
                 <p>
@@ -77,12 +77,12 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-store"></i>
-                  <p>Ventas</p>
+                <a href="pedidos" class="nav-link">
+                <i class="nav-icon fas fa-cart-arrow-down"></i>
+                  <p>Pedidos</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" hidden>
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-user"></i>
                   <p>Usuarios</p>
@@ -103,13 +103,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="configInicio" class="nav-link">
-                <i class="nav-icon fas fa-store"></i>
+                <i class="nav-icon fas fa-home"></i>
                   <p>Inicio</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="configRedes" class="nav-link">
-                  <i class="nav-icon fas fa-user"></i>
+                  <i class="nav-icon fab fa-instagram"></i>
                   <p>Redes sociales</p>
                 </a>
               </li>

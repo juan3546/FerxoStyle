@@ -338,12 +338,14 @@ class ControladorInventarios
 							   "precioOferta" => $_POST["editarOfertaEditar"],
 							   "cantidad" => $_POST["editarCantidad"],
 							   "foto" => $ruta,
-							   "estado" => $_POST["slcEstadoEditar"]);
+							   "estado" => $_POST["slcEstadoEditar"],
+							   "descripcion" => $_POST["editarDescripcion"]);
 				
 				$respuesta = ModeloInventario::mdlEditarInventario($tabla, $datos);
+				
 
 				if($respuesta == "ok"){
-				
+		
 					echo'<script>
 
 					Swal.fire({
@@ -360,6 +362,7 @@ class ControladorInventarios
 								})
 
 					</script>';
+					
 					
 					
 
@@ -437,4 +440,17 @@ class ControladorInventarios
 		}
 
 	}
+
+
+    /* mostrar productos */
+
+    public static function ctrMostrarProductos($item, $valor){
+
+        $tabla = "productos";
+
+        $respuesta = ModeloInventario::MdlMostrarInventario($tabla, $item, $valor);
+
+        return $respuesta;
+    }
+
 }

@@ -43,7 +43,7 @@ class ModeloInventario{
 	
 		if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT p.id,  p.codigo, p.idUsuario, p.idCategoria, p.nombre, p.genero, p.precio, p.precioOferta, p.cantidad, p.foto, p.estado, c.nombre as categoria FROM $tabla p JOIN categorias c ON p.idCategoria = c.id WHERE p.$item = :$item");
+			$stmt = Conexion::conectar()->prepare("SELECT p.id,  p.codigo, p.idUsuario, p.idCategoria, p.nombre, p.genero, p.precio, p.precioOferta, p.cantidad, p.foto, p.estado, p.descripcion, c.nombre as categoria FROM $tabla p JOIN categorias c ON p.idCategoria = c.id WHERE p.$item = :$item");
            
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
@@ -344,10 +344,9 @@ class ModeloInventario{
 	static public function mdlEditarInventario($tabla, $datos){
         
         if($datos["precioOferta"] == ""){
-            var_dump("hola");
-            $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET codigo = :codigo, idUsuario = :idUsuario, idCategoria = :idCategoria, nombre = :nombre, genero = :genero,  precio = :precio,  cantidad = :cantidad, foto = :foto, estado = :estado WHERE id = :id");
+            $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET codigo = :codigo, idUsuario = :idUsuario, idCategoria = :idCategoria, nombre = :nombre, genero = :genero,  precio = :precio,  cantidad = :cantidad, foto = :foto, estado = :estado, descripcion = :descripcion WHERE id = :id");
         }else{
-            $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET codigo = :codigo, idUsuario = :idUsuario, idCategoria = :idCategoria, nombre = :nombre, genero = :genero,  precio = :precio, precioOferta = :precioOferta, cantidad = :cantidad, foto = :foto, estado = :estado WHERE id = :id");
+            $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET codigo = :codigo, idUsuario = :idUsuario, idCategoria = :idCategoria, nombre = :nombre, genero = :genero,  precio = :precio, precioOferta = :precioOferta, cantidad = :cantidad, foto = :foto, estado = :estado, descripcion = :descripcion WHERE id = :id");
             $stmt->bindParam(":precioOferta", $datos["precioOferta"], PDO::PARAM_STR);
         }
 
@@ -363,10 +362,12 @@ class ModeloInventario{
         $stmt->bindParam(":cantidad", $datos["cantidad"], PDO::PARAM_STR);
 		$stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
         $stmt->bindParam(":estado", $datos["estado"], PDO::PARAM_STR);
-
+        $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
+        
 		if($stmt -> execute()){
 
 			return "ok";
+            
 		
 		}else{
 

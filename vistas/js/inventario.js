@@ -215,6 +215,7 @@ $(document).on("click", ".btnEditarProducto", function(){
       processData: false,
       dataType: "json",
       success: function(respuesta){
+
         $("#idProducto").val(respuesta["id"]);
         $("#EditarCodigo").val(respuesta["codigo"]);
         $("#editarNommbreP").val(respuesta["nombre"]);
@@ -232,6 +233,7 @@ $(document).on("click", ".btnEditarProducto", function(){
         $("#editarOfertaEditar").val(respuesta["precioOferta"]);
         $("#editarCantidad").val(respuesta["cantidad"]);
         $("#slcEstadoEditar").append('<option value="'+respuesta["estado"]+'" selected>'+respuesta["estado"]+'</option>');
+        $("#editarDescripcion").val(respuesta["descripcion"]);
         $("#fotoActual").val(respuesta["foto"]);
         if(respuesta["foto"] != ""){
 

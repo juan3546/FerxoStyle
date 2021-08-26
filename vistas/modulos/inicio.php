@@ -34,15 +34,30 @@
           </div>
         </div>
         <div class="card-body">
-          Contenido
+          <div class = "row">
+            <?php
+              include "inicio/cajas_superiores.php"
+            ?>
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <?php
+                include "inicio/piezas_mas_vendidas.php";
+              ?>
+            </div>
+          </div>
+
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
+        <!--div class="card-footer">
           
-        </div>
+        </div -->
         <!-- /.card-footer-->
       </div>
       <!-- /.card -->
+
 
     </section>
     <!-- /.content -->

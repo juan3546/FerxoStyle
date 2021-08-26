@@ -3,7 +3,7 @@
 <div class="login-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <img src="vistas/img/plantilla/logo.png" class="img-responsive" >
+      <img src="vistas/img/plantilla/logo.png"    width="153px" class="img-responsive" >
     </div>
 
     <div class="card-body  loginSC" id="">

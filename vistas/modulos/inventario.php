@@ -319,7 +319,7 @@ foreach ($inventario as $key => $value){
               <!-- subir foto -->
               <div class="form-group">
                 <div class="panel">Subir Foto</div>
-                <input type="file" name="nuevaFoto" id="nuevaFoto">
+                <input type="file" name="nuevaFoto" id="nuevaFoto" class="foto">
                 <p class="help-block">Peso máximo de la foto 200 MB</p>
                 <img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail previsualizar" id="previsualizar" width="100px">
               </div>
@@ -533,7 +533,19 @@ foreach ($inventario as $key => $value){
                 </div>
             </div>
 
+            <!-- Entrada de Descripción -->
+            <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-pen"></span>
+                    </div>
+                  </div>
+                  
+                  <textarea class="form-control" name="editarDescripcion" id="editarDescripcion" placeholder="Descripción" ></textarea>
 
+                </div>
+            </div>
 
             <!-- subir foto -->
               <div class="form-group">
